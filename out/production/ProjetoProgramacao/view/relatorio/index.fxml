@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RelatorioController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <HBox prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="58.0" prefWidth="400.0">
+                     <children>
+                        <Label text="Data:">
+                           <font>
+                              <Font name="Biotif-Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtData" prefHeight="42.0" prefWidth="334.0" promptText="01/12/2020" style="-fx-background-color: #FFF; -fx-border-color: #e4e6ef; -fx-background-radius: 10px; -fx-border-radius: 10px;">
+                           <font>
+                              <Font name="Biotif-Regular" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox prefWidth="400.0">
+                     <children>
+                        <Label text="Situação:">
+                           <font>
+                              <Font name="Biotif-Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtSituacao" prefHeight="42.0" prefWidth="334.0" promptText="Senha" style="-fx-background-color: #FFF; -fx-border-color: #e4e6ef; -fx-background-radius: 10px; -fx-border-radius: 10px;" text="Aprovada">
+                           <font>
+                              <Font name="Biotif-Regular" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </TextField>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefWidth="200.0">
+               <children>
+                  <VBox prefWidth="400.0">
+                     <children>
+                        <Label text="Cliente:">
+                           <font>
+                              <Font name="Biotif-Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="cbCliente" prefHeight="42.0" prefWidth="1182.0" promptText="Selecione um Cliente" style="-fx-border-color: #e4e6ef; -fx-background-color: #fff; -fx-background-radius: 10px; -fx-border-radius: 10px;" />
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox prefWidth="400.0">
+                     <children>
+                        <Label text="Vendedor:">
+                           <font>
+                              <Font name="Biotif-Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="cbVendedor" prefHeight="42.0" prefWidth="809.0" promptText="Selecione um Vendedor" style="-fx-border-color: #e4e6ef; -fx-background-color: #fff; -fx-background-radius: 10px; -fx-border-radius: 10px;" />
+                     </children>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#exportaHTML" prefHeight="36.0" prefWidth="165.0" style="-fx-background-color: #4165AD; -fx-background-radius: 10px;" text="Gerar Relátorio" textFill="WHITE">
+                     <font>
+                        <Font name="Biotif-Bold" size="13.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../util/imagens/save.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#exportaCSV" prefHeight="36.0" prefWidth="165.0" style="-fx-background-color: #FE556B; -fx-background-radius: 10px;" text="Arquivo CSV" textFill="WHITE">
+                     <font>
+                        <Font name="Biotif-Bold" size="13.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../util/imagens/trash.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

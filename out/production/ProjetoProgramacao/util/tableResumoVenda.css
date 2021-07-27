@@ -1,0 +1,31 @@
+/**
+ * @author Richard Pereira Cardoso <richardpcardoso@gmail.com>
+ */
+
+.table-view .column-header-background{
+    -fx-background-color:  #4165AD;
+}
+
+.table-view .column-header .label{
+    -fx-alignment: CENTER-LEFT;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: #4165AD;
+}
+
+.table-view .column-header-background .label{
+    -fx-text-fill: #FFF;
+
+}
+
+.table-view .table-cell{
+    -fx-text-fill: #fff;
+    -fx-border-color: #4D64D6;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #4165AD;
+    -fx-border-color: #4165AD;
+}

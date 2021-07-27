@@ -1,0 +1,113 @@
+/**
+ * @author Richard Pereira Cardoso <richardpcardoso@gmail.com>
+ */
+
+body{
+	background: #EEF0F8;
+	font-family: "Biotif"
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #333;
+}
+
+h2, h3, h4, h5, h6 {
+	margin: 3px 0px;
+}
+
+h1{
+	margin: .3rem .1rem;
+}
+
+h3{
+	color: #4165AD;
+}
+
+.container {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 1100px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table {
+    display: table;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #3F4254;
+    background-color: transparent;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+    background-color: #f3f6f9;
+    border-radius: 10px;
+}
+
+.table thead th, .table thead td, .table tfoot th, .table tfoot td {
+    font-weight: 600;
+    font-size: 1rem;
+    border-bottom-width: 1px;
+    padding: 1rem;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    
+    border-bottom: 0;
+    letter-spacing: 1px;
+}
+
+.table tbody th, .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-bottom: 1px solid #EBEDF3;
+}
+th {
+    text-align: inherit;
+}
+
+.table tfoot th {
+    text-align: right;
+}
+
+.card{
+	padding: 1.5rem;
+	background-color: #FFF;
+	border-radius: 10px;
+	margin: 1rem;
+
+    -webkit-box-shadow: 0 0 30px 0 rgba(82,63,105,.05);
+    box-shadow: 0 0 30px 0 rgba(82,63,105,.05);
+}
+
+.Aprovada{
+    color: #00BD47;
+}
+
+.Cancelada{
+    color: #FE556B;
+}
+
+img.logo{
+    max-height: 40px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+h1{
+    display: flex;
+    align-items: center;
+}

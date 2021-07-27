@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="955.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManipulaVendaController">
+   <children>
+      <VBox layoutX="10.0" layoutY="10.0" prefHeight="358.0" prefWidth="673.0" style="-fx-background-color: #fff; -fx-background-radius: 10px;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label text="Nova Venda" textFill="#333333">
+               <font>
+                  <Font name="Biotif-Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label prefWidth="588.0" text="Aqui você pode efetuar as vendas feitas ao seus clientes" textFill="#828282">
+               <font>
+                  <Font name="Biotif-Regular" size="13.0" />
+               </font>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </Label>
+            <HBox prefHeight="62.0" prefWidth="649.0">
+               <children>
+                  <VBox prefHeight="55.0" prefWidth="548.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <TabPane fx:id="tabVenda" prefHeight="558.0" prefWidth="936.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab closable="false" text="1 • Cliente">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="561.0" prefWidth="1345.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <VBox prefHeight="401.0" prefWidth="550.0" style="-fx-background-color: #fff; -fx-background-radius: 10px;">
+                                       <children>
+                                          <Label text="Selecione um cliente ou adicione um novo:">
+                                             <VBox.margin>
+                                                <Insets left="5.0" />
+                                             </VBox.margin></Label>
+                                          <TableView fx:id="tblCliente" onMouseClicked="#selecionarPessoa" prefHeight="359.0" prefWidth="530.0">
+                                             <columns>
+                                                <TableColumn fx:id="colCliente" prefWidth="529.0" text="Selecione ou adicione um novo cliente:">
+                                                   <graphic>
+                                                      <TextField fx:id="txtFiltroCliente" onKeyReleased="#filterPessoa" prefHeight="39.0" prefWidth="524.0" promptText="Digite um nome para filtrar" style="-fx-background-radius: 10px; -fx-background-color: #FFF; -fx-border-radius: 10px; -fx-border-color: #e4e6ef;">
+                                                         <font>
+                                                            <Font name="Biotif-Regular" size="14.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="12.0" right="12.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                   </graphic>
+                                                </TableColumn>
+                                             </columns>
+                                             <stylesheets>
+                                                <URL value="@../../util/table.css" />
+                                                <URL value="@../../util/tableVenda.css" />
+                                             </stylesheets>
+                                          </TableView>
+                                       </children>
+                                       <padding>
+                                          <Insets right="20.0" top="20.0" />
+                                       </padding>
+                                    </VBox>
+                                    <VBox prefHeight="401.0" prefWidth="157.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#createCliente" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #00C246; -fx-background-radius: 10px;" text="Adicionar" textFill="WHITE">
+                                             <font>
+                                                <Font name="Biotif-Regular" size="14.0" />
+                                             </font>
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../util/imagens/plus.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <VBox.margin>
+                                                <Insets top="42.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab closable="false" text="2 • Itens da Venda">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <VBox prefHeight="391.0" prefWidth="536.0">
+                                       <children>
+                                          <Label text="Selecione os itens da venda:" />
+                                          <TableView fx:id="tblProdutos" onMouseClicked="#selecionarProduto" prefHeight="359.0" prefWidth="530.0">
+                                             <columns>
+                                                <TableColumn fx:id="colNome" prefWidth="515.0">
+                                                   <graphic>
+                                                      <TextField fx:id="txtFiltroProduto" onKeyReleased="#filterProduto" prefHeight="39.0" prefWidth="516.0" promptText="Digite um nome para filtrar" style="-fx-background-radius: 10px; -fx-background-color: #FFF; -fx-border-radius: 10px; -fx-border-color: #e4e6ef;">
+                                                         <font>
+                                                            <Font name="Biotif-Regular" size="14.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="12.0" right="12.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                   </graphic>
+                                                </TableColumn>
+                                             </columns>
+                                             <stylesheets>
+                                                <URL value="@../../util/table.css" />
+                                                <URL value="@../../util/tableVenda.css" />
+                                             </stylesheets>
+                                          </TableView>
+                                       </children>
+                                       <padding>
+                                          <Insets top="10.0" />
+                                       </padding>
+                                    </VBox>
+                                    <VBox prefHeight="391.0" prefWidth="359.0" style="-fx-background-color: #4165AD; -fx-background-radius: 10px; -fx-effect: dropshadow(three-pass-box, rgba(82,62,105,0.05), 20, 0, 0, 0);">
+                                       <children>
+                                          <Label text="Resumo da Venda" textFill="WHITE">
+                                             <font>
+                                                <Font name="Biotif-Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Cliente:" textFill="WHITE">
+                                             <VBox.margin>
+                                                <Insets top="15.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label fx:id="lblCliente" textFill="WHITE">
+                                             <font>
+                                                <Font name="Biotif-Bold" size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <TableView fx:id="tblItens" onMouseClicked="#selecionarPessoa" prefHeight="215.0" prefWidth="299.0">
+                                             <columns>
+                                                <TableColumn fx:id="colProduto" prefWidth="143.0" text="Produto" />
+                                                <TableColumn fx:id="colQuant" prefWidth="83.0" text="Quant." />
+                                                <TableColumn fx:id="colValor" prefWidth="82.0" text="Valor" />
+                                             </columns>
+                                             <stylesheets>
+                                                <URL value="@../../util/table.css" />
+                                                <URL value="@../../util/tableResumoVenda.css" />
+                                             </stylesheets>
+                                          </TableView>
+                                          <HBox alignment="TOP_RIGHT">
+                                             <children>
+                                                <Label fx:id="lblTotal" text="Total: R$ 0.00" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Biotif-Bold" size="20.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets bottom="10.0" />
+                                                   </padding>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="TOP_RIGHT">
+                                             <children>
+                                                <Button alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#finalizar" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #00C246; -fx-background-radius: 10px;" text="Finalizar" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Biotif-Bold" size="14.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../util/imagens/check.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets left="40.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </HBox>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+               <stylesheets>
+                  <URL value="@../../util/tab.css" />
+                  <URL value="@../../util/tabVenda.css" />
+               </stylesheets>
+            </TabPane>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
